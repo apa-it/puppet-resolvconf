@@ -17,9 +17,10 @@ class resolvconf (
   $search     = [],
   $sortlist   = [],
   $options    = [],
+  $file       = '/etc/resolv.conf',
 ) {
 
-  resolvconf::file { '/etc/resolv.conf':
+  resolvconf::file { $file:
     header     => $header,
     nameserver => $nameserver,
     domain     => $domain,
